@@ -39,8 +39,8 @@ async function main()
         //////////////////////// DIA 3 ////////////////////////////
 
         
-        // let sql = "SELECT first_name, last_name, title FROM students AS ti INNER JOIN marks AS mi ON (ti.student_id = mi.student_id) INNER JOIN subjects AS si ON (si.subjects_id = mi.subject_id) "
-        // let sql = "SELECT first_name, last_name, title FROM teachers AS ti INNER JOIN subject_teacher AS mi ON (ti.teacher_id = mi.teacher_id) INNER JOIN subjects AS si ON (si.subjects_id = mi.subject_id) "
+        // let sql = "SELECT first_name, last_name, title FROM students AS ti INNER JOIN marks AS mi ON (ti.student_id = mi.student_id) INNER JOIN subjects AS si ON (si.subject_id = mi.subject_id) "
+        // let sql = "SELECT first_name, last_name, title FROM teachers AS ti INNER JOIN subject_teacher AS mi ON (ti.teacher_id = mi.teacher_id) INNER JOIN subjects AS si ON (si.subject_id = mi.subject_id) "
         let sql =`SELECT li.subject_id, title, si.first_name, si.last_name, COUNT(student_id)  FROM students AS a
         INNER JOIN groupis AS ti ON  (a.group_id = ti.group_id)
         INNER JOIN subject_teacher AS mi ON (ti.group_id = mi.group_id) 
